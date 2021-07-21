@@ -1,40 +1,55 @@
 from flask import Flask
 from markupsafe import escape
 from flask import url_for
+from flask import request
+from flask import redirect 
 
 app = Flask(__name__)
 
 @app.route("/")
 def welcomepage():
-    return "<p>Welcome to the Mountain Lion Computer Science Camp Python Course!</p>"
+    return '''
+        <form action="/login" method="post">
+            <textarea rows = "20" cols = "60" name ="description">
+            </textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+        <p>Welcome to the Mountain Lion Computer Science Camp Python Course!</p>
+    '''
 
-@app.route("/<name>")
-def hello(name):
-    return f"Hello, {escape(name)}!"
-
-"""@app.route('/user/<username>')
-def show_user_profile(username):
-    # show the user profile for that user
-    return f'User {escape(username)}'
-
-@app.route('/post/<int:post_id>')
-def show_post(post_id):
-    # show the post with the given id, the id is an integer
-    return f'Post {post_id}'
-
-@app.route('/path/<path:subpath>')
-def show_subpath(subpath):
-    # show the subpath after /path/
-    return f'Subpath {escape(subpath)}'"""
-
-@app.route('/login', methods=['GET', 'POST'])
+#HTTP METHOD?
+#worked prints in terminal
+#tab doesn't work
+@app.route('/login', methods=['POST'])
 def login():
+    code = request.form['description']
+    print(code)
+    code += '\nanswer2 = fizzbuzz(30)'
+    #code += '\nprint(fizzbuzz(30))'
+    loc = {}
+    globalS = {'__builtins__': None, 'range': range, 'str': str}
+    exec(code, globalS, loc)
+    answer = loc['answer2']
+    if answer == ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz","16","17","Fizz","19","Buzz","Fizz","22","23","Fizz","Buzz","26","Fizz","28","29","FizzBuzz"]:
+        return "Good Job!"
+    return code
+
+#Ask about moving static files
+#Don't know how to access post method from website
+#How to add templates
+    #move it to template folder (don't have)
+
+"""@app.route('/upload', methods=['GET', 'POST'])
+def upload_file():
     if request.method == 'POST':
-        return f"hi"
-    else:
-        return f"cool"
+        file = request.files['the_file']
+        file.save(f"/var/www/uploads/{secure_filename(f.filename)}")
+"""
+#How to upload files
+
 
 with app.test_request_context():
+    url_for('static', filename='index.html')    
     print(url_for('welcomepage'))
     print(url_for('hello', name=''))
-    print(url_for('login'))
+    #print(url_for('login'))
