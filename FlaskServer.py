@@ -8,14 +8,30 @@ app = Flask(__name__)
 
 @app.route("/")
 def welcomepage():
-    return '''
+    return f"hi"
+
+
+"""
         <form action="/login" method="post">
-            <textarea rows = "20" cols = "60" name ="description">
+            <textarea rows = "20" cols = "60" name ="description">#Set x equal to 5 and y = 2. Set variable z to the addition of x and y, and then set variable a to x to the power of y, and then set variable b to the square root of variable a. 
+def ArithmeticTest()
+    #TYPE BELOW
+    x =
+    y =
+    z = 
+    a =
+    b = 
+    #STOP TYPING
+    listanswer = []
+    listanswer.append(z)
+    listanswer.append(a)
+    listanswer.append(b)
+    return listanswer
             </textarea><br>
             <input type="submit" value="Submit">
         </form>
         <p>Welcome to the Mountain Lion Computer Science Camp Python Course!</p>
-    '''
+"""
 
 #HTTP METHOD?
 #worked prints in terminal
@@ -23,16 +39,39 @@ def welcomepage():
 @app.route('/login', methods=['POST'])
 def login():
     code = request.form['description']
+    code += '\nanswer2 = VariableTest()'
+    loc = {}
+    globalS = {'__builtins__': None, 'range': range, 'str': str, 'float': float}
+    try:
+        exec(code, globalS, loc)
+    except Exception as e:
+        print(e)
+        return str(e) + "Press the Back Button and Try Again!"
+    answer = loc['answer2']
+    print(answer)
+    print(loc['answer2'])
+    if answer == 5.0:
+        return "Good Job!"
+    return "Press the Back Button and Try Again!"
+
+@app.route('/cool', methods=['POST'])
+def cool():
+    code = request.form['paragraph']
     print(code)
-    code += '\nanswer2 = fizzbuzz(30)'
-    #code += '\nprint(fizzbuzz(30))'
+    code += '\nanswer2 = ArithmeticTest()'
     loc = {}
     globalS = {'__builtins__': None, 'range': range, 'str': str}
     exec(code, globalS, loc)
     answer = loc['answer2']
-    if answer == ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz","16","17","Fizz","19","Buzz","Fizz","22","23","Fizz","Buzz","26","Fizz","28","29","FizzBuzz"]:
+    if answer == [7, 25, 5]:
         return "Good Job!"
-    return code
+    return "Press the Back Button and Try Again!"
+
+@app.route('/Python3Syntax')
+def Python3Syntax():
+    return f"hi"
+
+    
 
 #Ask about moving static files
 #Don't know how to access post method from website
@@ -49,7 +88,9 @@ def upload_file():
 
 
 with app.test_request_context():
-    url_for('static', filename='index.html')    
+    url_for('static', filename='index.html')
+    url_for('static', filename='NewVersion2/Home.html')
+    url_for('static', filename='NewVersion2/Python-3-Syntax.html')
+    url_for('static', filename='NewVersion2/How-To-Install-Python-3.html')
     print(url_for('welcomepage'))
-    print(url_for('hello', name=''))
     #print(url_for('login'))
