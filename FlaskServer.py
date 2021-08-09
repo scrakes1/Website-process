@@ -96,20 +96,38 @@ def ElifTest():
     answer = loc['variableanswer']
     if answer == 9:
         return "Good Job!"
-    return "Press the Back Button and Try Again!" 
+    return "Press the Back Button and Try Again!"
 
-#Ask about moving static files
-#Don't know how to access post method from website
-#How to add templates
-    #move it to template folder (don't have)
+@app.route('/ComparatorTest', methods=['POST'])
+def ComparatorTest():
+    code = request.form['ComparatorAnswer']
+    code += '\nvariableanswer = ComparatorTest()'
+    loc = {}
+    globalS = {'__builtins__': None, 'range': range, 'str': str, 'if': if, 'elif': elif, 'else': else,}
+    try:
+        exec(code, globalS, loc)
+    except Exception as failure:
+        return str(failure) + " Press the Back Button and Try Again!"
+    answer = loc['variableanswer']
+    if answer == False:
+        return "Good Job!"
+    return "Press the Back Button and Try Again!"
 
-"""@app.route('/upload', methods=['GET', 'POST'])
-def upload_file():
-    if request.method == 'POST':
-        file = request.files['the_file']
-        file.save(f"/var/www/uploads/{secure_filename(f.filename)}")
-"""
-#How to upload files
+@app.route('/NestedIfTest', methods=['POST'])
+def NestedIfTest():
+    code = request.form['NestedIfAnswer']
+    code += '\nvariableanswer = NestedIfStatementTest()'
+    loc = {}
+    globalS = {'__builtins__': None, 'range': range, 'str': str, 'if': if, 'elif': elif, 'else': else,}
+    try:
+        exec(code, globalS, loc)
+    except Exception as failure:
+        return str(failure) + " Press the Back Button and Try Again!"
+    answer = loc['variableanswer']
+    if answer == 3:
+        return "Good Job!"
+    return "Press the Back Button and Try Again!"
+
 
 
 with app.test_request_context():
