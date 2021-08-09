@@ -36,9 +36,9 @@ def ArithmeticTest()
 #HTTP METHOD?
 #worked prints in terminal
 #tab doesn't work
-@app.route('/login', methods=['POST'])
-def login():
-    code = request.form['description']
+@app.route('/VariableTest', methods=['POST'])
+def VariableTest():
+    code = request.form['VTAnswer']
     code += '\nanswer2 = VariableTest()'
     loc = {}
     globalS = {'__builtins__': None, 'range': range, 'str': str, 'float': float}
@@ -46,7 +46,7 @@ def login():
         exec(code, globalS, loc)
     except Exception as e:
         print(e)
-        return str(e) + "Press the Back Button and Try Again!"
+        return str(e) + " Press the Back Button and Try Again!"
     answer = loc['answer2']
     print(answer)
     print(loc['answer2'])
@@ -54,9 +54,9 @@ def login():
         return "Good Job!"
     return "Press the Back Button and Try Again!"
 
-@app.route('/cool', methods=['POST'])
-def cool():
-    code = request.form['paragraph']
+@app.route('/ArithmeticTest', methods=['POST'])
+def ArithmeticTest():
+    code = request.form['ATAnswer']
     print(code)
     code += '\nanswer2 = ArithmeticTest()'
     loc = {}
