@@ -39,17 +39,16 @@ def ArithmeticTest()
 @app.route('/VariableTest', methods=['POST'])
 def VariableTest():
     code = request.form['VTAnswer']
-    code += '\nanswer2 = VariableTest()'
+    code += '\nvaribaleanswer = VariableTest()'
     loc = {}
     globalS = {'__builtins__': None, 'range': range, 'str': str, 'float': float}
     try:
         exec(code, globalS, loc)
-    except Exception as e:
-        print(e)
-        return str(e) + " Press the Back Button and Try Again!"
-    answer = loc['answer2']
-    print(answer)
-    print(loc['answer2'])
+    except Exception as failure:
+        return str(failure) + " Press the Back Button and Try Again!"
+    answer = loc['variableanswer']
+    #print(answer)
+    #print(loc['variableanswer'])
     if answer == 5.0:
         return "Good Job!"
     return "Press the Back Button and Try Again!"
@@ -57,21 +56,47 @@ def VariableTest():
 @app.route('/ArithmeticTest', methods=['POST'])
 def ArithmeticTest():
     code = request.form['ATAnswer']
-    print(code)
-    code += '\nanswer2 = ArithmeticTest()'
+    code += '\nvariableanswer = ArithmeticTest()'
     loc = {}
-    globalS = {'__builtins__': None, 'range': range, 'str': str}
-    exec(code, globalS, loc)
-    answer = loc['answer2']
+    globalS = {'__builtins__': None, 'range': range, 'str': str, 'import math': import math}
+    try:
+        exec(code, globalS, loc)
+    except Exception as failure:
+        return str(failure) + " Press the Back Button and Try Again!"
+    answer = loc['variableanswer']
     if answer == [7, 25, 5]:
         return "Good Job!"
     return "Press the Back Button and Try Again!"
 
-@app.route('/Python3Syntax')
-def Python3Syntax():
-    return f"hi"
+@app.route('/IfTest', methods=['POST'])
+def IfTest():
+    code = request.form['IfAnswer']
+    code += '\nvariableanswer = IfStatementTest()'
+    loc = {}
+    globalS = {'__builtins__': None, 'range': range, 'str': str, 'if': if}
+    try:
+        exec(code, globalS, loc)
+    except Exception as failure:
+        return str(failure) + " Press the Back Button and Try Again!"
+    answer = loc['variableanswer']
+    if answer == 1:
+        return "Good Job!"
+    return "Press the Back Button and Try Again!"
 
-    
+@app.route('/ElifTest', methods=['POST'])
+def ElifTest():
+    code = request.form['ElifAnswer']
+    code += '\nvariableanswer = ElseIfStatementTest()'
+    loc = {}
+    globalS = {'__builtins__': None, 'range': range, 'str': str, 'if': if, 'elif': elif, 'else': else}
+    try:
+        exec(code, globalS, loc)
+    except Exception as failure:
+        return str(failure) + " Press the Back Button and Try Again!"
+    answer = loc['variableanswer']
+    if answer == 9:
+        return "Good Job!"
+    return "Press the Back Button and Try Again!" 
 
 #Ask about moving static files
 #Don't know how to access post method from website
@@ -89,8 +114,9 @@ def upload_file():
 
 with app.test_request_context():
     url_for('static', filename='index.html')
-    url_for('static', filename='NewVersion2/Home.html')
-    url_for('static', filename='NewVersion2/Python-3-Syntax.html')
-    url_for('static', filename='NewVersion2/How-To-Install-Python-3.html')
+    url_for('static', filename='MLCSPython3/Home.html')
+    url_for('static', filename='MLCSPython3/Python-3-Syntax.html')
+    url_for('static', filename='MLCSPython3/How-To-Install-Python-3.html')
+    url_for('static', filename='MLCSPython3/Conditionals.html')
     print(url_for('welcomepage'))
     #print(url_for('login'))
