@@ -72,6 +72,7 @@
           <br>Now you try printing out in <a href="How-To-Install-Python-3.html" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">python 3</a>! The link will take you to our how to download Idle Python 3, so you can try doing all the examples in there!&nbsp;
         </p>
         <h4 class="u-text u-text-5">Input User Data</h4>
+        <h4 class="u-text u-text-default u-text-6">Input User Data</h4>
         <p class="u-custom-font u-font-roboto-slab u-text u-text-7">Now that we have print statements down, let's learn to input user data! We already learned how to use input in print statements:<br>
           <br>Ex.<br>print(input("Enter input: " ))<br>Output:<br>Enter input: Hello!<br>Hello!<br>
           <br>Once you are running your code the input command will allow you to type in the output area. With the example above it will print out anything you type. You can also use user input as a variable:<br>
@@ -96,7 +97,7 @@
           <br>Now you try copying the following the instructions above down in the box below! Press the submit button to be linked to another page that prints out your output! To come back just press the home button or back arrow!
         </p>
         <form action="/VariableTest" method="post">
-           <textarea rows = "20" cols = "60" name ="VTAnswer" class="u-custom-font u-font-roboto-slab u-text u-text-9">#Set x equal to 5 then cast it to a float and assign it the variable y in the given space below
+           <textarea rows = "10" cols = "60" name ="VTAnswer" class="u-custom-font u-font-roboto-slab u-text u-text-9">#Set x equal to 5 then cast it to a float and assign it the variable y in the given space below
 def VariableTest():
     #TYPE BELOW
     x = 
@@ -104,7 +105,7 @@ def VariableTest():
     #STOP TYPING
     return y
             </textarea><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" class="u-text u-text-9">
         </form>
         <h4 class="u-text u-text-10">Arithmetic and MATH</h4>
         <p class="u-custom-font u-font-roboto-slab u-text u-text-11">Hooray! Variables are done! But in this section you will learn how to do mathematics with integer and float variables and the rules. You will also learn to import the MATH class which allows you to do more mathematics that are not available on your keyboard (power, squared root, absolute value, etc).&nbsp;<br>
@@ -114,14 +115,15 @@ def VariableTest():
           <br>When dividing integers the result will drop the remainder, if you want to keep the remainder you must cast the equation to a float.<br>
           <br>Ex.<br>print(float(3/2))<br>
           <br>Output:<br>1.5<br>
+          <br>There is also the modulo symbol %. Using this will divide two numbers then give you the remainder as the answer. So 1 % 2 would give me 1, for 2 goes into 1 0 times with a remainder of 1. It isn't used often, but it is used sometimes so don't forget it!<br>
           <br>Next you will learn how to import the MATH class. Sometimes you will have to import classes to use different methods. The MATH class will give you the ability to use math equations not on your keyboard. We will not go over all of them, but we will go over the ones you will use the most.&nbsp;<br>
           <br>Ex.<br>import math<br>x = 3<br>y = 2<br>print(factorial(x))<br>print(pow(x, y))<br>print(sqrt(16))<br>print(abs(-10))<br>
           <br>Output:<br>6<br>9<br>4<br>10<br>
           <br>These are the most basic math equations that can be used, but there are many more. The factorial method gave the factorial of 3, which equals 6. The pow method took the power of y to x, which is the power of 2 to 3, which is 9. The sqrt takes the square root of a number, and the abs method gives the absolute value of a number.<br>
           <br>Now try following the instructions in the box below!&nbsp;Press the submit button to be linked to another page that prints out your output! To come back just press the home button or back arrow!
         </p>
-        <form action="/cool" method="post">
-            <textarea rows = "20" cols = "60" name ="ATAnswer" class="u-custom-font u-font-roboto-slab u-text u-text-11">#Set x equal to 5 and y = 2. Set variable z to the addition of x and y, and then set variable a to x to the power of y, and then set variable b to the square root of variable a. 
+        <form action="/ArithmeticTest" method="post">
+            <textarea rows = "18" cols = "60" name ="ATAnswer" class="u-custom-font u-font-roboto-slab u-text u-text-11">#Set x equal to 5 and y = 2. Set variable z to the addition of x and y, and then set variable a to x to the power of y, and then set variable b to the square root of variable a. 
 import math
 def ArithmeticTest():
     #TYPE BELOW
@@ -137,7 +139,7 @@ def ArithmeticTest():
     listanswer.append(b)
     return listanswer
             </textarea><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" class="u-text u-text-11">
         </form>
         <h4 class="u-text u-text-12">Basic Errors and Commenting</h4>
         <p class="u-custom-font u-font-roboto-slab u-text u-text-13">When writing code you will always run into errors. There are many type of errors, but I will go over the most basic ones so you can recognize them and fix the problem in your code. There is also commenting which helps organize your code, but we'll start with errors first.<br>

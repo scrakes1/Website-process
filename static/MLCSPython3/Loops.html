@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Loops</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="Loops.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 3.21.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,400,500,600,700,800,900|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Loops">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body"><header class="u-clearfix u-header u-header" id="sec-e337"><div class="u-clearfix u-sheet u-sheet-1">
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse u-custom-font u-font-playfair-display" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</symbol>
+</defs></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-custom-font u-font-playfair-display u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="How-To-Install-Python-3.html" target="_blank" style="padding: 10px 20px;">How To Install Python 3</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="How-To-Install-Python-3.html" target="_blank" style="padding: 10px 20px;">How To Install Python 3</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+        <div class="u-image u-image-circle u-image-1" alt="" data-image-width="363" data-image-height="329"></div>
+        <h3 class="u-custom-font u-font-playfair-display u-headline u-text u-text-1">
+          <a href="/">Mountain Lion Computer Science</a>
+        </h3>
+      </div></header> 
+    <section class="u-clearfix u-grey-5 u-section-1" id="sec-14c3">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-align-center u-text u-text-1">Loops</h3>
+        <p class="u-custom-font u-font-roboto-slab u-text u-text-2">Welcome to learning about loops in Python 3! Here you will be learning about for loops, while loops, nested for loops, and recursion!<br>
+        </p>
+        <h4 class="u-text u-text-3">For Loops</h4>
+        <p class="u-custom-font u-font-roboto-slab u-text u-text-4">We know now how to ask questions with if statements and to manipulate our variables. But what if we want to do this multiple times over? This is when loops come in and the most basic kind is the for loop. An example is below.<br>
+          <br>Ex.<br>x = 5<br>for i in range(x):<br>&nbsp; &nbsp; x = x + 1<br>print(x)<br>
+          <br>Output:<br>10<br>
+          <br>What just happened was the variable x was set to 5. In the for loop the variable i is created and automatically set to 0. If the variable i is in the range (basically means less than) the length/value of x, then continue with the for loop. If the condition is met the next line is tabbed (or 4 spaces), and the action is written. The action here is add 1 to x. After the action is complete, the for loop will automatically add 1 to i and ask the question again whether i is less than x. It keeps doing this until the condition is no longer true, so when i = 5, it stops. So 1 was added to x five times giving us the output 10.<br>
+          <br>Also the way range works is like this: range(start, stop, step). If you just put 1 number in it will be the stop number, and it will automatically start at 0 and step by 1. However you can change this if you like.<br>
+          <br>You can also put if statements in a for loop to ask a question multiple times! Look at the example below.<br>
+          <br>Ex.<br>x = 0<br>bools = False<br>for i in range(10):<br>&nbsp; &nbsp; if bools == False:<br>&nbsp; &nbsp; &nbsp; &nbsp; x = x + 2<br>&nbsp; &nbsp; &nbsp; &nbsp; bools = True<br>&nbsp; &nbsp; else:<br>&nbsp; &nbsp; &nbsp; &nbsp; bools = False<br>print(x)<br>
+          <br>Ouput:<br>10<br>
+          <br>What happens here is that the if and else statement are just ran ten times. Only half the time is the condition true for x to add 2 for bools is always alternating. So 5 times 2 is 10. Also the rules of if, elif, and else statements still apply in the for loop. If it only goes through one if statement it will then just skip the elif and else statements and start at the top of the for loop.<br>
+          <br>Try the problem below in the textbox! Press the submit button to be linked to another page that prints out your output! To come back just press the home button or back arrow!<br>
+        </p>
+        <form action="/FLTest" method="post">
+           <textarea rows = "10" cols = "60" name ="FLAnswer" class="u-custom-font u-font-roboto-slab u-text u-text-4">#Set answer to 0. Then create a for loop with the variable i with a range of 5. In the for loop put an if statement that says if i is divisible by 2 add 2 to answer, else subtract 1 from answer. Hint: Use modulo (%)
+def ForLoopTest():
+    #TYPE BELOW
+    answer = 
+    for
+
+
+
+
+    #STOP TYPING
+    return answer
+            </textarea><br>
+            <input type="submit" value="Submit" class="u-text u-text-4">
+        </form>
+        <h4 class="u-text u-text-5">While Loops</h4>
+        <h4 class="u-text u-text-default u-text-6">Input User Data</h4>
+        <p class="u-custom-font u-font-roboto-slab u-text u-text-7">While loops are just like for loops, but instead of using numbers to repeat the manipulation of variables, the loop continues based on whether a condition is true or not. See the example below.<br>
+          <br>Ex.<br>x = 0<br>bools = True<br>while bools == True:<br>&nbsp; &nbsp; x = x + 1<br>&nbsp; &nbsp; if x &gt;= 5:<br>&nbsp; &nbsp; &nbsp; &nbsp; bools = False<br>print(bools)<br>print(x)<br>
+          <br>Output:<br>False<br>5<br>
+          <br>The while loop is like an if statement and will keep running the code nested underneath it until the condition is false. In the example above bools is True until x becomes greater than 5. Then it's set to False which doesn't fulfill the condition of the while loop breaking it.&nbsp;<br>
+          <br>One more thing that must be mentioned is the break command. It can be used for for loops and while loops, but most commonly used on while loops for it is easier to break the loop then change the condition. The break command basically stops running the loop and immediately exits it. An example is below.<br>
+          <br>Ex.<br>while True:<br>&nbsp; &nbsp; if True:<br>&nbsp; &nbsp; &nbsp; &nbsp; print("hi")<br>&nbsp; &nbsp; &nbsp; &nbsp; break<br>
+          <br>Output:<br>hi<br>
+          <br>The break above prevents an infinite loop for the condition True is never changed, but the break command forces the loop to stop, so instead of printing "hi" infinitely, it only prints it once.<br>
+          <br>Now you try copying the following the instructions above down in the box below! Press the submit button to be linked to another page that prints out your output! To come back just press the home button or back arrow!<br>
+        </p>
+        <form action="/WLTest" method="post">
+           <textarea rows = "10" cols = "60" name ="WLAnswer" class="u-custom-font u-font-roboto-slab u-text u-text-9">#Set sums to 0 and x to 1. Create a for loop that while x is less than or equal to 10, add x to sums. Then add 1 to x.
+def WhileLoopTest():
+    #TYPE BELOW
+    sums = 
+    x = 
+    while
+
+
+    #STOP TYPING
+    return sums
+            </textarea><br>
+            <input type="submit" value="Submit" class="u-text u-text-9">
+        </form>
+        <h4 class="u-text u-text-8">Nested For Loops</h4>
+        <p class="u-custom-font u-font-roboto-slab u-text u-text-9">Just like if statements, you nest loops, but the most common method of nesting loops is nesting for loops. Nesting for loops is putting a for loop within a for loop. This allows you to control a certain amount of times multiple variables are manipulated. An example is below.<br>
+          <br>Ex.<br>x = 0<br>y = 0<br>for i in range(10):<br>&nbsp; &nbsp; y = y + i<br>&nbsp; &nbsp; for j in range(10):<br>&nbsp; &nbsp; &nbsp; &nbsp; x = x + j<br>print(y)<br>print(x)<br>
+          <br>Output:<br>45<br>450<br>
+          <br>Both i and j have a range of 10 and they're being added to y and x respectively. The variable y's output is 45 for it's just adding all number under 10 (0+1+2+3+4+5+6+7+8+9). The variable x is also doing that but times 10, for when j reaches the number 10 after iterating by 1, it goes to the top of the for loop for the variable i and is restarted to 0. So x's output is 10 times the amount of y.<br>
+          <br>Now you try copying the following the instructions above down in the box below! Press the submit button to be linked to another page that prints out your output! To come back just press the home button or back arrow!
+        </p>
+        <form action="/NFLTest" method="post">
+           <textarea rows = "10" cols = "60" name ="NFLAnswer" class="u-custom-font u-font-roboto-slab u-text u-text-9">#Set x to 0. Create two for loops one nested with variable i with a range of 10, and variable j with a range of 5. Subtract 1 from x within the i for loop. Add 1 to j within the j for loop which is within the i for loop.
+def NestedForLoopTest():
+    #TYPE BELOW
+    x = 
+    
+
+
+
+    #STOP TYPING
+    return x
+            </textarea><br>
+            <input type="submit" value="Submit" class="u-text u-text-9">
+        </form>
+        <h4 class="u-text u-text-10">Loop Practice</h4>
+        <p class="u-custom-font u-font-roboto-slab u-text u-text-11">Now that you've learned and done some simple loop problems. Here is a harder prompt. Don't worry if you don't get it on your first try! Follow the instructions on the box below!&nbsp;Press the submit button to be linked to another page that prints out your output! To come back just press the home button or back arrow!<br>
+        </p>
+        <form action="/LP" method="post">
+           <textarea rows = "10" cols = "60" name ="LPAnswer" class="u-custom-font u-font-roboto-slab u-text u-text-9">#Use two nested while loops to count all the prime numbers between the numbers 2 and 100. If a prime number is found add 1 to the variable answer. Answer has already been defined for you. Create your own variables to find the prime numbers. Hint: use %
+def LoopPractice():
+    #TYPE BELOW
+    answer = 0
+    
+
+
+
+    #STOP TYPING
+    return answer
+            </textarea><br>
+            <input type="submit" value="Submit" class="u-text u-text-9">
+        </form>
+        <a href="http://127.0.0.1:5000/static/MountainLionComputerScience/Python3SyntaxInput.html" class="u-btn u-btn-round u-button-style u-custom-font u-font-roboto u-hover-palette-1-light-2 u-palette-1-base u-radius-2 u-btn-1">Next&nbsp;<span class="u-icon u-icon-1"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068 c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557 l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104 c0.006-.006,0.011-.013,0.018-.019C513.968,262.339,513.943,249.635,506.134,241.843z"></path></svg><img></span>
+        </a>
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-584a"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-custom-font u-font-raleway u-small-text u-text u-text-variant u-text-1">Contact Here:<br>krunderwood@yahoo.com<br>scarlett_crakes@ryecountryday.org<br>
+        </p>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/landing-page" target="_blank">
+        <span>Free Landing Page</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="https://nicepage.com/html-website-builder" target="_blank">
+        <span>HTML Designer</span>
+      </a>. 
+    </section>
+  </body>
+</html>

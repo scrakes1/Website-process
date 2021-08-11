@@ -70,7 +70,7 @@
           <br>Try the problem below in the textbox! Press the submit button to be linked to another page that prints out your output! To come back just press the home button or back arrow!<br>
         </p>
         <form action="/IfTest" method="post">
-           <textarea rows = "20" cols = "60" name ="IfAnswer" class="u-custom-font u-font-roboto-slab u-text u-text-4">#Set x equal to 0 then write an if statement that says if x is less than 3, then underneath the if statement add 1 to the variable x.
+           <textarea rows = "10" cols = "60" name ="IfAnswer" class="u-custom-font u-font-roboto-slab u-text u-text-4">#Set x equal to 0 then write an if statement that says if x is less than 3, then underneath the if statement add 1 to the variable x.
 def IfStatementTest():
     #TYPE BELOW
     x =
@@ -80,11 +80,12 @@ def IfStatementTest():
     #STOP TYPING
     return x
             </textarea><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" class="u-text u-text-4">
         </form>
         <h4 class="u-text u-text-5">Elif and Else Statements</h4>
+        <h4 class="u-text u-text-default u-text-6">hello</h4>
         <p class="u-custom-font u-font-roboto-slab u-text u-text-7">What if you want to have more than one conditional statement? Sure you can add another if statement, but while running it will take both if statements in at once. If you want to traverse each if statement one at a time, that's when elif and else statements come in.<br>
-          <br>Basically elif statements go after if statements. The code runs and sees if the conditional given in the statement is correct. If it's false or <i>else if</i>&nbsp;then and only then will it consider the next elif statement. Look at the example below.<br>
+          <br>Basically elif statements go after if statements. The code runs and sees if the conditional given in the statement is correct. If it's false or <i>else if</i>&nbsp; then and only then will it consider the next elif statement. Look at the example below.<br>
           <br>Ex.<br>if 3 &gt; 4:<br>&nbsp; &nbsp; print("hi")<br>elif 2 == 2:<br>&nbsp; &nbsp; print("goodbye")<br>
           <br>Output:<br>goodbye<br>
           <br>Only after considering the first if statement will it start considering the second elif statement. However if the first conditional is true, it will ignore anything that comes after it when using elif.<br>
@@ -98,7 +99,7 @@ def IfStatementTest():
           <br>Now you try copying the following the instructions above down in the box below! Press the submit button to be linked to another page that prints out your output! To come back just press the home button or back arrow!<br>
         </p>
         <form action="/ElifTest" method="post">
-           <textarea rows = "20" cols = "60" name ="ElifAnswer" class="u-custom-font u-font-roboto-slab u-text u-text-7">#Set x equal to 2 then write an if statement that says if x is greater than 3, then underneath the if statement add 2 to the variable x. Next underneath the entire if statement write an elif statement that says if x is equal to 3, then add 4 to x. Then underneath the entire elif statement write an else statement that adds 7 to x. Look at the examples above for guidance.
+           <textarea rows = "23" cols = "60" name ="ElifAnswer" class="u-custom-font u-font-roboto-slab u-text u-text-9">#Set x equal to 2 then write an if statement that says if x is greater than 3, then underneath the if statement add 2 to the variable x. Next underneath the entire if statement write an elif statement that says if x is equal to 3, then add 4 to x. Then underneath the entire elif statement write an else statement that adds 7 to x. Look at the examples above for guidance.
 def ElseIfStatementTest():
     #TYPE BELOW
     x =
@@ -117,7 +118,7 @@ def ElseIfStatementTest():
     #STOP TYPING
     return x
             </textarea><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" class="u-text u-text-9">
         </form>
         <h4 class="u-text u-text-8">Comparators</h4>
         <p class="u-custom-font u-font-roboto-slab u-text u-text-9">Earlier you learned the comparators greater than (&gt;), less than (&lt;), and equal to (==). Now we will be learning more comparators. The next ones we will be learning about also mainly apply to numbers. They are greater than or equal to (&gt;=), less than or equal to (&lt;=), or not equal to (!=). Some examples are below.<br>
@@ -133,7 +134,7 @@ def ElseIfStatementTest():
           <br>Now you try copying the following the instructions above down in the box below! Press the submit button to be linked to another page that prints out your output! To come back just press the home button or back arrow!
         </p>
         <form action="/ComparatorTest" method="post">
-           <textarea rows = "20" cols = "60" name ="ComparatorAnswer" class="u-custom-font u-font-roboto-slab u-text u-text-9">#Set x equal to 6, y equal to hello, z equal to True, and answer equal to False. Make 2 if statements. For the first if statement if y is equal to hello and x does not equal 5, then set the variable answer to True. For the second if statement, if z is True or x is greater than or equal to 10, set answer to False.
+           <textarea rows = "15" cols = "60" name ="ComparatorAnswer" class="u-custom-font u-font-roboto-slab u-text u-text-9">#Set x equal to 6, y equal to hello, z equal to True, and answer equal to False. Make 2 if statements. For the first if statement if y is equal to hello and x does not equal 5, then set the variable answer to True. For the second if statement, if z is True or x is greater than or equal to 10, set answer to False.
 def ComparatorTest():
     #TYPE BELOW
     x =
@@ -146,7 +147,7 @@ def ComparatorTest():
     #STOP TYPING
     return answer
             </textarea><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" class="u-text u-text-9">
         </form>
         <h4 class="u-text u-text-10">Nested If Statements</h4>
         <p class="u-custom-font u-font-roboto-slab u-text u-text-11">What are nested if statements? Nested if statements are basically an if statement in another if statement. An example is below.<br>
@@ -159,7 +160,7 @@ def ComparatorTest():
           <br>Now try following the instructions in the box below!&nbsp;Press the submit button to be linked to another page that prints out your output! To come back just press the home button or back arrow!
         </p>
         <form action="/NestedIfTest" method="post">
-           <textarea rows = "20" cols = "60" name ="NestedIfAnswer" class="u-custom-font u-font-roboto-slab u-text u-text-11">#Set x equal to False, y to True, z to False, and answer to 0. Write three if statements, but they should all be nested, the first if statement asks whether x is equal to false, and then adds 1 to answer. The second nested if statement asks if y is equal to True and then adds 2 to answer. The last if statement asks if z is equal to True and adds 3 to answer.
+           <textarea rows = "22" cols = "60" name ="NestedIfAnswer" class="u-custom-font u-font-roboto-slab u-text u-text-11">#Set x equal to False, y to True, z to False, and answer to 0. Write three if statements, but they should all be nested, the first if statement asks whether x is equal to false, and then adds 1 to answer. The second nested if statement asks if y is equal to True and then adds 2 to answer. The last if statement asks if z is equal to True and adds 3 to answer.
 def NestedIfStatementTest():
     #TYPE BELOW
     x =
@@ -178,9 +179,9 @@ def NestedIfStatementTest():
     #STOP TYPING
     return answer
             </textarea><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" class="u-text u-text-11">
         </form>
-        <a href="Home.html" class="u-btn u-btn-round u-button-style u-custom-font u-font-roboto u-hover-palette-1-light-2 u-palette-1-base u-radius-2 u-btn-1">Next&nbsp;<span class="u-icon u-icon-1"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068 c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557 l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104 c0.006-.006,0.011-.013,0.018-.019C513.968,262.339,513.943,249.635,506.134,241.843z"></path></svg><img></span>
+        <a href="Loops.html" class="u-btn u-btn-round u-button-style u-custom-font u-font-roboto u-hover-palette-1-light-2 u-palette-1-base u-radius-2 u-btn-1">Next&nbsp;<span class="u-icon u-icon-1"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068 c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557 l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104 c0.006-.006,0.011-.013,0.018-.019C513.968,262.339,513.943,249.635,506.134,241.843z"></path></svg><img></span>
         </a>
       </div>
     </section>

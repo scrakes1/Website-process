@@ -39,6 +39,7 @@ def ArithmeticTest()
 @app.route('/VariableTest', methods=['POST'])
 def VariableTest():
     code = request.form['VTAnswer']
+    print(code)
     code += '\nvaribaleanswer = VariableTest()'
     loc = {}
     globalS = {'__builtins__': None, 'range': range, 'str': str, 'float': float}
@@ -58,7 +59,7 @@ def ArithmeticTest():
     code = request.form['ATAnswer']
     code += '\nvariableanswer = ArithmeticTest()'
     loc = {}
-    globalS = {'__builtins__': None, 'range': range, 'str': str, 'import math': import math}
+    globalS = {'__builtins__': None, 'range': range, 'str': str}
     try:
         exec(code, globalS, loc)
     except Exception as failure:
@@ -73,7 +74,7 @@ def IfTest():
     code = request.form['IfAnswer']
     code += '\nvariableanswer = IfStatementTest()'
     loc = {}
-    globalS = {'__builtins__': None, 'range': range, 'str': str, 'if': if}
+    globalS = {'__builtins__': None, 'range': range, 'str': str}
     try:
         exec(code, globalS, loc)
     except Exception as failure:
@@ -88,7 +89,7 @@ def ElifTest():
     code = request.form['ElifAnswer']
     code += '\nvariableanswer = ElseIfStatementTest()'
     loc = {}
-    globalS = {'__builtins__': None, 'range': range, 'str': str, 'if': if, 'elif': elif, 'else': else}
+    globalS = {'__builtins__': None, 'range': range, 'str': str}
     try:
         exec(code, globalS, loc)
     except Exception as failure:
@@ -103,7 +104,7 @@ def ComparatorTest():
     code = request.form['ComparatorAnswer']
     code += '\nvariableanswer = ComparatorTest()'
     loc = {}
-    globalS = {'__builtins__': None, 'range': range, 'str': str, 'if': if, 'elif': elif, 'else': else,}
+    globalS = {'__builtins__': None, 'range': range, 'str': str}
     try:
         exec(code, globalS, loc)
     except Exception as failure:
@@ -118,13 +119,73 @@ def NestedIfTest():
     code = request.form['NestedIfAnswer']
     code += '\nvariableanswer = NestedIfStatementTest()'
     loc = {}
-    globalS = {'__builtins__': None, 'range': range, 'str': str, 'if': if, 'elif': elif, 'else': else,}
+    globalS = {'__builtins__': None, 'range': range, 'str': str}
     try:
         exec(code, globalS, loc)
     except Exception as failure:
         return str(failure) + " Press the Back Button and Try Again!"
     answer = loc['variableanswer']
     if answer == 3:
+        return "Good Job!"
+    return "Press the Back Button and Try Again!"
+
+@app.route('/FLTest', methods=['POST'])
+def FLTest():
+    code = request.form['FLAnswer']
+    code += '\nvariableanswer = ForLoopTest()'
+    loc = {}
+    globalS = {'__builtins__': None, 'range': range, 'str': str}
+    try:
+        exec(code, globalS, loc)
+    except Exception as failure:
+        return str(failure) + " Press the Back Button and Try Again!"
+    answer = loc['variableanswer']
+    if answer == 4:
+        return "Good Job!"
+    return "Press the Back Button and Try Again!"
+
+@app.route('/WLTest', methods=['POST'])
+def WLTest():
+    code = request.form['WLAnswer']
+    code += '\nvariableanswer = WhileLoopTest()'
+    loc = {}
+    globalS = {'__builtins__': None, 'range': range, 'str': str}
+    try:
+        exec(code, globalS, loc)
+    except Exception as failure:
+        return str(failure) + " Press the Back Button and Try Again!"
+    answer = loc['variableanswer']
+    if answer == 55:
+        return "Good Job!"
+    return "Press the Back Button and Try Again!"
+
+@app.route('/NFLTest', methods=['POST'])
+def FLTest():
+    code = request.form['NFLAnswer']
+    code += '\nvariableanswer = NestedForLoopTest()'
+    loc = {}
+    globalS = {'__builtins__': None, 'range': range, 'str': str}
+    try:
+        exec(code, globalS, loc)
+    except Exception as failure:
+        return str(failure) + " Press the Back Button and Try Again!"
+    answer = loc['variableanswer']
+    if answer == 40:
+        return "Good Job!"
+    return "Press the Back Button and Try Again!"
+
+@app.route('/LP', methods=['POST'])
+def FLTest():
+    code = request.form['LPAnswer']
+    code += '\nvariableanswer = LoopPractice()'
+    loc = {}
+    globalS = {'__builtins__': None, 'range': range, 'str': str}
+    try:
+        exec(code, globalS, loc)
+    except Exception as failure:
+        return str(failure) + " Press the Back Button and Try Again!"
+    answer = loc['variableanswer']
+    if answer == 25:
         return "Good Job!"
     return "Press the Back Button and Try Again!"
 
@@ -136,5 +197,6 @@ with app.test_request_context():
     url_for('static', filename='MLCSPython3/Python-3-Syntax.html')
     url_for('static', filename='MLCSPython3/How-To-Install-Python-3.html')
     url_for('static', filename='MLCSPython3/Conditionals.html')
+    url_for('static', filename='MLCSPython3/Loops.html')
     print(url_for('welcomepage'))
-    #print(url_for('login'))
+    print(url_for('VariableTest'))
