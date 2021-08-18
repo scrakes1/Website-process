@@ -39,7 +39,6 @@ def ArithmeticTest()
 @app.route('/VariableTest', methods=['POST'])
 def VariableTest():
     code = request.form['VTAnswer']
-    print(code)
     code += '\nvaribaleanswer = VariableTest()'
     loc = {}
     globalS = {'__builtins__': None, 'range': range, 'str': str, 'float': float}
@@ -160,7 +159,7 @@ def WLTest():
     return "Press the Back Button and Try Again!"
 
 @app.route('/NFLTest', methods=['POST'])
-def FLTest():
+def NFLTest():
     code = request.form['NFLAnswer']
     code += '\nvariableanswer = NestedForLoopTest()'
     loc = {}
@@ -175,7 +174,7 @@ def FLTest():
     return "Press the Back Button and Try Again!"
 
 @app.route('/LP', methods=['POST'])
-def FLTest():
+def LP():
     code = request.form['LPAnswer']
     code += '\nvariableanswer = LoopPractice()'
     loc = {}
@@ -189,6 +188,65 @@ def FLTest():
         return "Good Job!"
     return "Press the Back Button and Try Again!"
 
+@app.route('/ListTest', methods=['POST'])
+def ListTest():
+    code = request.form['ListAnswer']
+    code += '\nvariableanswer = ListTest()'
+    loc = {}
+    globalS = {'__builtins__': None, 'range': range, 'str': str, 'len':len}
+    try:
+        exec(code, globalS, loc)
+    except Exception as failure:
+        return str(failure) + " Press the Back Button and Try Again!"
+    answer = loc['variableanswer']
+    if answer == [1, 3, 4]:
+        return "Good Job!"
+    return "Press the Back Button and Try Again!"
+
+@app.route('/DictTest', methods=['POST'])
+def DictTest():
+    code = request.form['DictAnswer']
+    code += '\nvariableanswer = DictionaryTest()'
+    loc = {}
+    globalS = {'__builtins__': None, 'range': range, 'str': str}
+    try:
+        exec(code, globalS, loc)
+    except Exception as failure:
+        return str(failure) + " Press the Back Button and Try Again!"
+    answer = loc['variableanswer']
+    if answer == 1 : "goodbye":
+        return "Good Job!"
+    return "Press the Back Button and Try Again!"
+
+@app.route('/TupleTest', methods=['POST'])
+def TupleTest():
+    code = request.form['TupleAnswer']
+    code += '\nvariableanswer = TupleTest()'
+    loc = {}
+    globalS = {'__builtins__': None, 'range': range, 'str': str}
+    try:
+        exec(code, globalS, loc)
+    except Exception as failure:
+        return str(failure) + " Press the Back Button and Try Again!"
+    answer = loc['variableanswer']
+    if answer == (1, 2, 3, 7, 8, 9):
+        return "Good Job!"
+    return "Press the Back Button and Try Again!"
+
+@app.route('/LDTP', methods=['POST'])
+def LDTP():
+    code = request.form['LDTPAnswer']
+    code += '\nvariableanswer = List/Dictionary/TuplePractice()'
+    loc = {}
+    globalS = {'__builtins__': None, 'range': range, 'str': str}
+    try:
+        exec(code, globalS, loc)
+    except Exception as failure:
+        return str(failure) + " Press the Back Button and Try Again!"
+    answer = loc['variableanswer']
+    if answer == 66:
+        return "Good Job!"
+    return "Press the Back Button and Try Again!"
 
 
 with app.test_request_context():
@@ -198,5 +256,6 @@ with app.test_request_context():
     url_for('static', filename='MLCSPython3/How-To-Install-Python-3.html')
     url_for('static', filename='MLCSPython3/Conditionals.html')
     url_for('static', filename='MLCSPython3/Loops.html')
+    url_for('static', filename='MLCSPython3/Lists-Dictionaries-Tuples.html')
     print(url_for('welcomepage'))
     print(url_for('VariableTest'))
