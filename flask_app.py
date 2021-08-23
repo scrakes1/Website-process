@@ -190,7 +190,7 @@ def DictTest():
     except Exception as failure:
         return str(failure) + " Press the Back Button and Try Again!"
     answer = loc['variableanswer']
-    if answer = "goodbye":
+    if answer == "goodbye":
         return "Good Job!"
     return "Press the Back Button and Try Again!"
 
