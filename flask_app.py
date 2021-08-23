@@ -1,12 +1,17 @@
+
+# A very simple Flask Hello World app for you to get started with...
+
 from flask import Flask
 from flask import url_for
 from flask import request
+from flask import redirect
 
 app = Flask(__name__)
 
-#HTTP METHOD?
-#worked prints in terminal
-#tab doesn't work
+@app.route('/')
+def hello():
+    return redirect("static/MLCSPython3/Home.html", code=302)
+
 @app.route('/VariableTest', methods=['POST'])
 def VariableTest():
     code = request.form['VTAnswer']
@@ -35,7 +40,7 @@ def ArithmeticTest():
     except Exception as failure:
         return str(failure) + " Press the Back Button and Try Again!"
     answer = loc['variableanswer']
-    if answer == [7, 25, 5]:
+    if answer == [7, 25, 5.0]:
         return "Good Job!"
     return "Press the Back Button and Try Again!"
 
@@ -185,7 +190,7 @@ def DictTest():
     except Exception as failure:
         return str(failure) + " Press the Back Button and Try Again!"
     answer = loc['variableanswer']
-    if answer == 1 : "goodbye":
+    if (1, "goodbye") in answer.items():
         return "Good Job!"
     return "Press the Back Button and Try Again!"
 
@@ -227,3 +232,4 @@ with app.test_request_context():
     url_for('static', filename='MLCSPython3/Conditionals.html')
     url_for('static', filename='MLCSPython3/Loops.html')
     url_for('static', filename='MLCSPython3/Lists-Dictionaries-Tuples.html')
+
