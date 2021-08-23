@@ -34,7 +34,7 @@ def ArithmeticTest():
     code = request.form['ATAnswer']
     code += '\nvariableanswer = ArithmeticTest()'
     loc = {}
-    globalS = {'__builtins__': None, 'range': range, 'str': str}
+    globalS = {'__builtins__': None, 'range': range, 'str': str, 'pow':pow}
     try:
         exec(code, globalS, loc)
     except Exception as failure:
