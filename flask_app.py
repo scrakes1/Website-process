@@ -15,7 +15,7 @@ def hello():
 @app.route('/VariableTest', methods=['POST'])
 def VariableTest():
     code = request.form['VTAnswer']
-    code += '\nvaribaleanswer = VariableTest()'
+    code += '\nvariableanswer = VariableTest()'
     loc = {}
     globalS = {'__builtins__': None, 'range': range, 'str': str, 'float': float}
     try:
