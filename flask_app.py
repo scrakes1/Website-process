@@ -40,7 +40,7 @@ def ArithmeticTest():
     except Exception as failure:
         return str(failure) + " Press the Back Button and Try Again!"
     answer = loc['variableanswer']
-    if answer == [7, 25, 5.0]:
+    if answer == [7, 25]:
         return "Good Job!"
     return "Press the Back Button and Try Again!"
 
