@@ -212,7 +212,7 @@ def TupleTest():
 @app.route('/LDTP', methods=['POST'])
 def LDTP():
     code = request.form['LDTPAnswer']
-    code += '\nvariableanswer = List/Dictionary/TuplePractice()'
+    code += '\nvariableanswer = ListDictionaryTuplePractice()'
     loc = {}
     globalS = {'__builtins__': None, 'range': range, 'str': str}
     try:
