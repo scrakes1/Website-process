@@ -214,7 +214,7 @@ def LDTP():
     code = request.form['LDTPAnswer']
     code += '\nvariableanswer = ListDictionaryTuplePractice()'
     loc = {}
-    globalS = {'__builtins__': None, 'range': range, 'str': str}
+    globalS = {'__builtins__': None, 'range': range, 'str': str, 'len': len}
     try:
         exec(code, globalS, loc)
     except Exception as failure:
